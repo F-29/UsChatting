@@ -18,6 +18,12 @@ io.on('connection', socket => {
     socket.on('disconnect', () => {
         console.log('user was disconnected');
     });
+
+    socket.on('createMessage', message => {
+        console.log(message);
+    });
+
+    socket.emit('newMessage', {from: "Mosich79@gmail.com", text: "Khobie?", created_at: 1234});
 });
 
 sever.listen(PORT, () => {
