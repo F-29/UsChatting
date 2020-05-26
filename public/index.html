@@ -2,15 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UsChatting</title>
+    <title>&starf; Just Chat &starf;</title>
+
 </head>
 <body>
 <header>
-    <h1 style="text-align: center; color: #bfaf7e">The Header</h1>
+    <h1 style="text-align: center; color: #bfaf7e">Just Chat!</h1>
 </header>
-<div>
-    <script src="./js/socket.io.js"></script>
-    <script src="./js/index.js"></script>
+<div style="text-align: center; margin: 0; padding: 0">
+    <form id="message-form">
+        <input type="text" name="message" placeholder="Message..."
+               style="border: 2px solid #bfaf7e; padding: 8px;margin: 0; border-radius: 15px;">
+        <button type="submit"
+                style="margin: 0; padding: 8px; border-radius: 15px; color: #f6e1a8; background-color:#c63434;">SEND
+            &xrArr;
+        </button>
+    </form>
+    <br>
+    <ol id="messages" style="padding: 15px; margin: 20px">
+
+    </ol>
 </div>
+<script src="./js/lib/socket.io.js"></script>
+<script src="./js/lib/jquery-3.5.1.min.js"></script>
+<script src="./js/index.js"></script>
+
 </body>
 </html>

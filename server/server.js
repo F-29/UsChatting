@@ -28,9 +28,8 @@ io.on('connection', socket => {
     socket.on('createMessage', message => {
         console.log(message);
         socket.broadcast.emit('newMessage', generateMessage(message.from, message.text));
+        socket.emit('newMessage', generateMessage(message.from, message.text));
     });
-
-    socket.emit('newMessage', generateMessage("Mosich79@gmail.com", "Khobie?"));
 });
 
 sever.listen(PORT, () => {
